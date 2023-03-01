@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> It's your day!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+            background: #03002e;
+            min-height: 100vh;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section ::before {
+            content: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #0e1111, #03002e, transparent);
+            z-index: 1000;
+        }
+
+        section ::after {
+            content: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #0e1111, #03002e, transparent);
+            z-index: 10000;
+            mix-blend-mode: color;
+        }
+
+
+        section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        #text {
+            position: relative;
+            color: white;
+            font-size: 7em;
+            z-index: 1;
+        }
+
+        .wish {
+            position: relative;
+            padding: 100px;
+            background: linear-gradient(to bottom, #2a1229, transparent);
+        }
+
+
+
+
+
+
+
+        /* .mywish h2 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .mywish p {
+            font-size: 1em;
+            color: white;
+        } */
+
+        .wishes {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* card atas */
+        .card {
+
+            background: linear-gradient(#03002e, #0e1111, transparent);
+            width: 300px;
+            height: 500px;
+            /* margin: 10px 15px 10px 10px; */
+            margin-left: 50px;
+            margin-right: 50px;
+            /* margin-bottom: 20px; */
+            border-radius: 15px 15px 0 0;
+            transition: transform 0.5s;
+        }
+
+        .card-image {
+            background-color: aqua;
+            /* height: 100px; */
+            background-size: cover;
+        }
+
+
+        video {
+            border-radius: 15px 15px 0 0;
+        }
+
+
+        #wishes :hover {
+            transform: translateY(-10px);
+        }
+
+
+
+        .card p {
+            margin: 20px 15px;
+            color: white;
+        }
+
+        .happy {
+            margin-top: 14%;
+            margin-bottom: 14%;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 80px;
+        }
+
+        #click {
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            margin-top: -120px;
+            border-radius: 10px 20px 10px 20px;
+        }
+
+        #click:hover {
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <img src="0.png" id="0">
+        <img src="1.png" id="1">
+        <img src="2.png" id="2">
+        <h2 id="text"> It's your day! </h2>
+
+        <img src="3.png" id="3">
+        <img src="4.png" id="4">
+        <img src="5.png" id="5">
+        <img src="6.png" id="6">
+
+
+
+
+    </section>
+
+    <div class="wish">
+        <div class="content">
+
+            <div class="happy">
+                <div id="app"></div><br>
+                <a id="click" class="btn" href="#wishes">Click for more wishes for you!</a>
+            </div>
+
+            <!-- container card atas -->
+            <section id="wishes">
+                <div class="card">
+                    <div class="card-image card-1"> </div>
+                    <video controls>
+                        <source src="-1.mp4" type="video/mp4">
+                    </video>
+                    <p> "I hope you have the most happiest and the most fun, healthiest,
+                        safest, and warmest birthday of your life."
+                    <p>
+                </div>
+                <div class="card">
+                    <div class="card-image card-2"></div>
+                    <video controls>
+                        <source src="-2.mp4" type="video/mp4">
+                    </video>
+                    <p> "Have good friends around you, have good peers. Surround yourself
+                        with
+                        good people cause you’re a good person too."</p>
+                </div>
+
+            </section>
+            <section id="container">
+                <div class="card">
+                    <div class="card-image card-3"></div>
+                    <video controls>
+                        <source src="-3.mp4" type="video/mp4">
+                    </video>
+                    <p> "You're doing fine, sometimes you're doing better, sometimes you're
+                        doing
+                        worse. But at the end it's you, so I want you to have no regret. I want you to feel
+                        yourself
+                        grow, and I want you to also love yourself." </p>
+                </div>
+                <div class="card">
+                    <div class="card-image card-4"></div>
+                    <video controls>
+                        <source src="-4.mp4" type="video/mp4">
+                    </video>
+                    <p> "For all of you who are striving for your dreams, you should believe
+                        in
+                        yourself. And don't let anyone bring you down."</p>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        let a = document.getElementById("1");
+        let b = document.getElementById("2");
+        let c = document.getElementById("3");
+        let d = document.getElementById("4");
+        let e = document.getElementById("5");
+        let f = document.getElementById("6");
+        let g = document.getElementById("text");
+        let h = document.getElementById("0");
+
+
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            a.style.left = -value * 0.10 + 'px';
+            b.style.bottom = value * 0.15 + 'px';
+            c.style.top = value * 0.25 + 'px';
+            d.style.right = value * 0.25 + 'px';
+            e.style.left = value * 0.15 + 'px';
+            g.style.right = value * 0.25 + 'px';
+            h.style.bottom = value * 0.20 + 'px';
+
+        })
+    </script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script type="text/javascript">
+        var app = document.getElementById('app');
+        var typewriter = new Typewriter(app, {
+            loop: true,
+            delay: 75,
+        });
+
+        typewriter
+            .pauseFor(3500)
+            .typeString('Happy Birthday')
+            .pauseFor(300)
+            .deleteChars(14)
+            .typeString('Cece!')
+            .pauseFor(500)
+            .deleteChars(5)
+            .typeString('May you are cared for in the way you need it,')
+            .pauseFor(500)
+            .deleteChars(45)
+            .typeString('May today be the light for your situation,')
+            .pauseFor(500)
+            .deleteChars(42)
+            .typeString('May you have a pleasant day today and always,')
+            .pauseFor(500)
+            .deleteChars(45)
+            .typeString('Things will get better and you will shine brighter.')
+            .pauseFor(500)
+            .deleteChars(51)
+            .typeString('Happy Birthday!')
+            .pauseFor(300)
+            .deleteChars(15)
+            .start();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>
